@@ -1,0 +1,36 @@
+<!-- DO NOT DELETE
+    Access GraphQL query data with {{_.data}}
+    Access the widget id with {{_.id}}
+-->
+<div id="widget-{{_.id}}" class="page-title--with-background" style="background-image: url({{ imageUrl.src }})">
+    {{#if url.value }}
+    <a href="{{ url.value }}" class="widget--link"></a>
+    {{/if}}
+    <h2 class="page-heading">{{ myText }}</h2>
+</div>
+<style>
+    #widget-{{_.id}}.page-title--with-background {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        min-height: 340px;
+    }
+    #widget-{{_.id}}.page-title--with-background::before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #0000002F;
+        content: '';
+        left: 0;
+        top: 0;
+    }
+    #widget-{{_.id}}.page-title--with-background .page-heading {
+        margin-bottom: 0;
+        position: absolute;
+        width: 100%;
+        transform: translateY(-50%);
+        top: 50%;
+        color: #fff;
+        font-size: 48px;
+    }
+</style>
